@@ -121,7 +121,7 @@ evenAndOdd([2, 4, 3, 7, 9]);
 //Crea una función llamada dniLetter que recibirá un número de DNI sin la letra. Dentro de esa función pon este array ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'] La letra del DNI se calcula a través del resto de dividir el número de DNI entre 23, ese número te dará la posición del array donde se encuentra la letra correspondiente a ese DNI. Imprime por consola el DNI con su letra correspondiente.
 
 const dniLetter = numeroDNI => {
-  const letrasDNI = [
+  const letters = [
     'T',
     'R',
     'W',
@@ -147,20 +147,26 @@ const dniLetter = numeroDNI => {
     'E'
   ];
 
-  const posicionLetra = numeroDNI % 23;
+  const positionLetter = numeroDNI % 23;
 
-  const letra = letrasDNI[posicionLetra];
+  const letra = letters[positionLetter];
 
   console.log(`El DNI completo es: ${numeroDNI}${letra}`);
 };
 
-dniLetter([53542553]);
+dniLetter(53542553);
 
 //Crea una función que reciba un array con 3 palabras, debes imprimir por consola un array que contenga la inicial y la última letra de cada palabra en mayúsculas, es decir, si nuestra función recibiera un array con ['hola', 'adios', 'gato'] deberá imprimir por consola ['H', 'A', 'A', 'S', 'G', 'O']
 
-const threeWords = words => {};
+const threeWords = words => {
+  const letterA = words[0].charAt(0).toUpperCase();
+  const letterB = words[1].charAt(0).toUpperCase();
+  const letterC = words[2].charAt(0).toUpperCase();
+  const finalLetterA = words[0].charAt(4).toUpperCase();
+  const finalLetterB = words[1].charAt(4).toUpperCase();
+  const finalLetterC = words[2].charAt(3).toUpperCase();
 
-const words = 25;
+  console.log([letterA, finalLetterA, letterB, finalLetterB, letterC, finalLetterC]);
+};
 
-console.log(words);
 threeWords(['coche', 'perro', 'mesa']);
