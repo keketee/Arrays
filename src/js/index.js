@@ -162,9 +162,9 @@ const threeWords = words => {
   const letterA = words[0].charAt(0).toUpperCase();
   const letterB = words[1].charAt(0).toUpperCase();
   const letterC = words[2].charAt(0).toUpperCase();
-  const finalLetterA = words[0].charAt(4).toUpperCase();
-  const finalLetterB = words[1].charAt(4).toUpperCase();
-  const finalLetterC = words[2].charAt(3).toUpperCase();
+  const finalLetterA = words[0].charAt(words[0].length - 1).toUpperCase();
+  const finalLetterB = words[1].charAt(words[1].length - 1).toUpperCase();
+  const finalLetterC = words[2].charAt(words[2].length - 1).toUpperCase();
 
   console.log([letterA, finalLetterA, letterB, finalLetterB, letterC, finalLetterC]);
 };
